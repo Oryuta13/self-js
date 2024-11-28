@@ -3,9 +3,15 @@
         <h1>Hello Code mafia!!</h1>
     </body>
     <script>
-        let obj = {
-            subObj : {val2 : 1000}
+        try {
+            const num = '3'
+            if (typeof num !== 'number') {
+                throw 'numは数値型でなければなりません'
+            }
+
+            console.log(`${num} x 5 = $(num * 5)`)
+        } catch (error) {
+            console.error(error)
         }
-        console.log(obj.subObj.val2)
     </script>
 </html>
