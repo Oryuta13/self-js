@@ -2,19 +2,30 @@
     <body>
         <h1>Hello Code mafia!!</h1>
     </body>
+        <button>ボタン</button>
     <script>
-        const kakezan = (a, b) => {
-            return a * b
+        const sleep = (ms) => {
+            const startTime = new Date();
+
+            // // whileループでmsミリ秒分のループを継続
+            // while (new Date() - startTime < ms)
+
+            // alert('sleet関数が完了しました')
+
+            setTimeout(function() {
+                alert('sleep関数が完了しました')
+            }, ms )
         }
 
-        const result = kakezan(-11, 9)
-        console.log(result)
+        sleep(3000) // sleep関数を実行
 
-
-
-
-
-
-
+        // ボタンにクリック時の処理を実装
+        const btn = document.querySelector('button')
+        const clickHandler = () => {
+            alert('ボタンがクリックされました')
+        }
+        btn.addEventListener('click', clickHandler) // ボタンにアクションを登録
     </script>
 </html>
+
+<script src="./script.js"></script>
